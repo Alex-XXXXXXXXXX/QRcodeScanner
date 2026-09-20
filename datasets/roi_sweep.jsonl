@@ -1,0 +1,4 @@
+{"image":"../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg","expectedOutcome":"detect_only","rows":48,"columns":48,"roi":[900,1700,1200,1200],"variant":"wide"}
+{"image":"../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg","expectedOutcome":"detect_only","rows":48,"columns":48,"roi":[1000,1800,980,1000],"variant":"medium"}
+{"image":"../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg","expectedOutcome":"detect_only","rows":48,"columns":48,"roi":[1040,1830,900,920],"variant":"tight"}
+{"image":"../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg","expectedOutcome":"detect_only","rows":48,"columns":48,"roi":[1050,1840,860,880],"variant":"very-tight"}

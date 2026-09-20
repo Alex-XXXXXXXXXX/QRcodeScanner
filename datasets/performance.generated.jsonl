@@ -1,0 +1,2 @@
+{"image":"generated:datamatrix","expectedText":"PERFORMANCE-DM-2026","format":"Data Matrix","split":"test","batch":"generated-dm","device":"generator","tags":["clean","generated"]}
+{"image":"generated:qrcode","expectedText":"PERFORMANCE-QR-2026","format":"QR Code","split":"test","batch":"generated-qr","device":"generator","tags":["clean","generated"]}

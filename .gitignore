@@ -1,0 +1,5 @@
+/build/
+/.vs/
+/out/
+/third_party/opencv-*/
+/third_party/opencv-*-windows.exe

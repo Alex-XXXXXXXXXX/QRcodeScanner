@@ -1,0 +1,208 @@
+{
+    "correct": 0,
+    "detectOnlyPassed": 1,
+    "firstReadRate": 0,
+    "iterations": 1,
+    "labelledImages": 0,
+    "misreadRate": 0,
+    "nearDuplicateLeakage": [
+    ],
+    "nearDuplicateLeakageCount": 0,
+    "negativeAttempts": 0,
+    "negativeFalsePositiveRate": 0,
+    "negativeFalsePositives": 0,
+    "noRead": 0,
+    "noReadRate": 0,
+    "p50Ms": 80.553,
+    "p95Ms": 80.553,
+    "records": [
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1709,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "Data Matrix：ChecksumError @ DMDecoder.cpp:427",
+                    "latencyUs": 2243,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "Data Matrix：ChecksumError @ DMDecoder.cpp:427",
+                    "latencyUs": 2525,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1157,
+                    "name": "ROI-2",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1562,
+                    "name": "ROI-2-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5465,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1754,
+                    "name": "ROI-3",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 4932,
+                    "name": "ROI-2-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 2150,
+                    "name": "ROI-3-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5100,
+                    "name": "ROI-3-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 9237,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 18649,
+                    "name": "对比度拉伸",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 24165,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-auto",
+            "candidateCorners": [
+                [
+                    [
+                        1049.7506561279297,
+                        1912.7051696777344
+                    ],
+                    [
+                        1806.5823211669922,
+                        1837.0220031738281
+                    ],
+                    [
+                        1883.9288177490234,
+                        2610.4872436523438
+                    ],
+                    [
+                        1127.097152709961,
+                        2686.17041015625
+                    ]
+                ],
+                [
+                    [
+                        1451.9150848388672,
+                        1915.2987670898438
+                    ],
+                    [
+                        1787.2233123779297,
+                        1889.5058898925781
+                    ],
+                    [
+                        1812.4232025146484,
+                        2217.1058349609375
+                    ],
+                    [
+                        1477.114974975586,
+                        2242.898712158203
+                    ]
+                ],
+                [
+                    [
+                        925.1374053955078,
+                        1388.2906494140625
+                    ],
+                    [
+                        2889.599853515625,
+                        3040.7997436523438
+                    ],
+                    [
+                        1591.9974975585938,
+                        4583.357666015625
+                    ],
+                    [
+                        -372.4648132324219,
+                        2930.8485717773438
+                    ]
+                ]
+            ],
+            "confidence": 0.8292987964771416,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：Data Matrix：ChecksumError @ DMDecoder.cpp:427",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 0,
+            "latencyUs": 80553,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 1,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "diagnostic",
+            "stageTimingsUs": {
+                "L0": 1709,
+                "L3": 24171,
+                "ROI": 10763,
+                "quality": 5060
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        }
+    ],
+    "roiAnnotatedAttempts": 0,
+    "roiBestIoUP50": 0,
+    "roiRecallAt50": 0,
+    "roiRecallAt70": 0,
+    "routes": {
+        "timeout": 1
+    },
+    "stageP95Ms": {
+        "L0": 1.709,
+        "L3": 24.171,
+        "ROI": 10.763,
+        "quality": 5.06
+    },
+    "wrong": 0
+}

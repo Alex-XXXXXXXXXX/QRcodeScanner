@@ -1,0 +1,4828 @@
+{
+    "correct": 0,
+    "detectOnlyPassed": 50,
+    "firstReadRate": 0,
+    "iterations": 50,
+    "labelledImages": 0,
+    "misreadRate": 0,
+    "nearDuplicateLeakage": [
+    ],
+    "nearDuplicateLeakageCount": 0,
+    "negativeAttempts": 0,
+    "negativeFalsePositiveRate": 0,
+    "negativeFalsePositives": 0,
+    "noRead": 0,
+    "noReadRate": 0,
+    "p50Ms": 80.396,
+    "p95Ms": 80.817,
+    "records": [
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1658,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5985,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 7359,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 9667,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 17407,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 45402,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 0,
+            "latencyUs": 80342,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1658,
+                "L3": 45407,
+                "ROI": 4696,
+                "quality": 4997
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1633,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6836,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 8560,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 9357,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 15746,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 50634,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 1,
+            "latencyUs": 80645,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1634,
+                "L3": 50640,
+                "ROI": 3263,
+                "quality": 2437
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 3348,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6620,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 7946,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 16525,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 26559,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 32849,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7133177728084744,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 2,
+            "latencyUs": 80280,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 3350,
+                "L3": 32854,
+                "ROI": 7708,
+                "quality": 3088
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1660,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 4914,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5865,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 16126,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 17625,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 50555,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 3,
+            "latencyUs": 80817,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1661,
+                "L3": 50566,
+                "ROI": 3195,
+                "quality": 2793
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1644,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 4144,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 4966,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 9519,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 14315,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 52517,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 4,
+            "latencyUs": 80480,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1645,
+                "L3": 52521,
+                "ROI": 4140,
+                "quality": 3658
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1815,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 7180,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 9135,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 12875,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 27982,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 36373,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7133177728084744,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 5,
+            "latencyUs": 80376,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1816,
+                "L3": 36377,
+                "ROI": 3928,
+                "quality": 3016
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 2469,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 4535,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5395,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 8991,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 12804,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 48605,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 6,
+            "latencyUs": 80281,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 2470,
+                "L3": 48610,
+                "ROI": 7789,
+                "quality": 4011
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1645,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 3876,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 4864,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 13427,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 16666,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 52352,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 7,
+            "latencyUs": 80668,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1645,
+                "L3": 52358,
+                "ROI": 3139,
+                "quality": 2931
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1710,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5266,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6870,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 8933,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 16007,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 51232,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 8,
+            "latencyUs": 80513,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1711,
+                "L3": 51237,
+                "ROI": 3190,
+                "quality": 3017
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1630,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5823,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 8524,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 15726,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 20618,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 46204,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7133177728084744,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 9,
+            "latencyUs": 80646,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1631,
+                "L3": 46208,
+                "ROI": 3256,
+                "quality": 3054
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1985,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 4144,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5479,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 14355,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 22246,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 44410,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 10,
+            "latencyUs": 80321,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1986,
+                "L3": 44415,
+                "ROI": 4465,
+                "quality": 3004
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 2290,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 3841,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 4895,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 11488,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 16623,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 50898,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7133177728084744,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 11,
+            "latencyUs": 80317,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 2291,
+                "L3": 50902,
+                "ROI": 3311,
+                "quality": 3259
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1736,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 3900,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5168,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 14688,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 18383,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 49900,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 12,
+            "latencyUs": 80668,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1737,
+                "L3": 49905,
+                "ROI": 3120,
+                "quality": 3570
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1634,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 4049,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 4879,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 9811,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 14360,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 54114,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 13,
+            "latencyUs": 80305,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1635,
+                "L3": 54119,
+                "ROI": 3185,
+                "quality": 2897
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1655,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5670,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 9136,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 15344,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 19498,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 47369,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 14,
+            "latencyUs": 80455,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1657,
+                "L3": 47374,
+                "ROI": 3495,
+                "quality": 2675
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 2228,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5508,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6878,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 11991,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 13596,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 51922,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 15,
+            "latencyUs": 80438,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 2230,
+                "L3": 51927,
+                "ROI": 4211,
+                "quality": 2899
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1698,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 3997,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 4896,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 14396,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 17551,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 49433,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 16,
+            "latencyUs": 80316,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1699,
+                "L3": 49438,
+                "ROI": 4618,
+                "quality": 2938
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1961,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6191,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6672,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 10590,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 15073,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 51025,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 17,
+            "latencyUs": 80548,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1962,
+                "L3": 51029,
+                "ROI": 3831,
+                "quality": 2395
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1743,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 8141,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 11965,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 9684,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 26463,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 34586,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7133177728084744,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 18,
+            "latencyUs": 80356,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1744,
+                "L3": 34590,
+                "ROI": 5145,
+                "quality": 4168
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1669,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6295,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 7246,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 11175,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 17066,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 47456,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 19,
+            "latencyUs": 80364,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1669,
+                "L3": 47461,
+                "ROI": 5366,
+                "quality": 2428
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 2044,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5365,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6674,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 14382,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 21344,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 42711,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 20,
+            "latencyUs": 80379,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 2045,
+                "L3": 42719,
+                "ROI": 4116,
+                "quality": 4690
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 2160,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6762,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 7569,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 14564,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 20418,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 44028,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 21,
+            "latencyUs": 80329,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 2161,
+                "L3": 44031,
+                "ROI": 3390,
+                "quality": 3475
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1686,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 7524,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 11610,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 13135,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 20080,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 45205,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 22,
+            "latencyUs": 80473,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1686,
+                "L3": 45209,
+                "ROI": 3681,
+                "quality": 2230
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1701,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 4975,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5658,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 16903,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 18911,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 46465,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7133177728084744,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 23,
+            "latencyUs": 80316,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1701,
+                "L3": 46470,
+                "ROI": 5923,
+                "quality": 2260
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1967,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5086,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5349,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 14616,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 17417,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 48737,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7133177728084744,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 24,
+            "latencyUs": 81070,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1968,
+                "L3": 48739,
+                "ROI": 4412,
+                "quality": 3382
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 2746,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 8014,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 8496,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 14762,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 20382,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 35776,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7133177728084744,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 25,
+            "latencyUs": 80416,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 2748,
+                "L3": 35782,
+                "ROI": 6711,
+                "quality": 6626
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1704,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 7899,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 8816,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 16395,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 20642,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 44247,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 26,
+            "latencyUs": 80231,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1705,
+                "L3": 44252,
+                "ROI": 3396,
+                "quality": 2264
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1668,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6752,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 8439,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 20923,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 19276,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 45299,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 27,
+            "latencyUs": 80380,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1668,
+                "L3": 45304,
+                "ROI": 3465,
+                "quality": 2168
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 3267,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 4848,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5112,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 13226,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 17179,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 48245,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 28,
+            "latencyUs": 80490,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 3269,
+                "L3": 48249,
+                "ROI": 3712,
+                "quality": 3172
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 2271,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 4444,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 7490,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 15257,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 20112,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 47930,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7133177728084744,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 29,
+            "latencyUs": 80537,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 2272,
+                "L3": 47935,
+                "ROI": 3368,
+                "quality": 2356
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1684,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6471,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6953,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 10194,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 16597,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 49825,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 30,
+            "latencyUs": 80378,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1684,
+                "L3": 49830,
+                "ROI": 3415,
+                "quality": 2309
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1692,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 8665,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 9746,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 13856,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 17184,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 45231,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7133177728084744,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 31,
+            "latencyUs": 80468,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1692,
+                "L3": 45236,
+                "ROI": 5294,
+                "quality": 2292
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 2397,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6643,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 7528,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 11393,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 17370,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 44429,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 32,
+            "latencyUs": 80322,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 2398,
+                "L3": 44434,
+                "ROI": 6104,
+                "quality": 3294
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1678,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6634,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 9414,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 11686,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 17516,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 47837,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 33,
+            "latencyUs": 80329,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1679,
+                "L3": 47842,
+                "ROI": 3736,
+                "quality": 2859
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1661,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 4959,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6234,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 11384,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 15190,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 52721,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 34,
+            "latencyUs": 80276,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1662,
+                "L3": 52725,
+                "ROI": 3469,
+                "quality": 2175
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1859,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6985,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 10209,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 9059,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 13926,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 50671,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 35,
+            "latencyUs": 80271,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1859,
+                "L3": 50677,
+                "ROI": 4555,
+                "quality": 2200
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1799,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 4281,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6462,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 12696,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 16220,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 51882,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 36,
+            "latencyUs": 80425,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1800,
+                "L3": 51887,
+                "ROI": 3443,
+                "quality": 2743
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1715,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6610,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 9220,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 10463,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 22940,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 42750,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 37,
+            "latencyUs": 80575,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1716,
+                "L3": 42755,
+                "ROI": 3391,
+                "quality": 3088
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1875,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 8971,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 11259,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 15936,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 20838,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 41410,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7133177728084744,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 38,
+            "latencyUs": 80396,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1876,
+                "L3": 41416,
+                "ROI": 4668,
+                "quality": 2560
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1740,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6866,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 8759,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 16582,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 20475,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 44995,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7133177728084744,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 39,
+            "latencyUs": 80412,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1741,
+                "L3": 45000,
+                "ROI": 3531,
+                "quality": 2710
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 7867,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6248,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6997,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 8917,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 14436,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 44346,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7133177728084744,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 40,
+            "latencyUs": 80447,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 7869,
+                "L3": 44351,
+                "ROI": 4850,
+                "quality": 2610
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 2734,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 7856,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 8951,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 25257,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 25175,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 35374,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7133177728084744,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 41,
+            "latencyUs": 80360,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 2735,
+                "L3": 35379,
+                "ROI": 5377,
+                "quality": 2664
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 2637,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6147,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 8905,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 16728,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 15947,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 46338,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7133177728084744,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 42,
+            "latencyUs": 80548,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 2638,
+                "L3": 46343,
+                "ROI": 3864,
+                "quality": 2761
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1680,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6944,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 11535,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 10972,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 16227,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 48485,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 43,
+            "latencyUs": 80430,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1681,
+                "L3": 48490,
+                "ROI": 4664,
+                "quality": 2334
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 2812,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6431,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 7419,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 14131,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 16612,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 48877,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 44,
+            "latencyUs": 80991,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 2813,
+                "L3": 48886,
+                "ROI": 3323,
+                "quality": 2869
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1695,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 5213,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6095,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 10685,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 17512,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 47990,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7133177728084744,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 45,
+            "latencyUs": 80561,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1696,
+                "L3": 47995,
+                "ROI": 3681,
+                "quality": 4324
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1667,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 7681,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 9346,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 15549,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 19457,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 45421,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 46,
+            "latencyUs": 80326,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1667,
+                "L3": 45426,
+                "ROI": 3697,
+                "quality": 2339
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 1726,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6121,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 9204,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 11276,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 14848,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 49890,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 47,
+            "latencyUs": 80414,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 1727,
+                "L3": 49894,
+                "ROI": 5434,
+                "quality": 2312
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 3104,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6358,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 8414,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 15517,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 18889,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0,
+            "estimatedColumns": 0,
+            "estimatedRows": 0,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：L3 recovery reached request deadline",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 48,
+            "latencyUs": 80013,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 3105,
+                "L3": 44000,
+                "ROI": 3376,
+                "quality": 4213
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        },
+        {
+            "attempts": [
+                {
+                    "diagnostic": "",
+                    "latencyUs": 2826,
+                    "name": "原始灰度-快速",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 6408,
+                    "name": "ROI-1",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 7402,
+                    "name": "ROI-1-对比度",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 9444,
+                    "name": "原始灰度-困难",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 14621,
+                    "name": "ROI-1-反锐化",
+                    "success": false
+                },
+                {
+                    "diagnostic": "",
+                    "latencyUs": 47562,
+                    "name": "L3-网格恢复-1",
+                    "success": false
+                }
+            ],
+            "batch": "field-sample-001",
+            "candidateCorners": [
+                [
+                    [
+                        1062,
+                        1917
+                    ],
+                    [
+                        1791,
+                        1845
+                    ],
+                    [
+                        1890,
+                        2601
+                    ],
+                    [
+                        1143,
+                        2691
+                    ]
+                ]
+            ],
+            "confidence": 0.7135502174856582,
+            "estimatedColumns": 48,
+            "estimatedRows": 48,
+            "expectedOutcome": "detect_only",
+            "expectedText": "",
+            "failureReason": "已定位候选码，但未通过网格采样或纠错：located ROI; sampling did not produce a checksum-valid payload",
+            "failureStage": "deadline",
+            "image": "../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg",
+            "iteration": 49,
+            "latencyUs": 80367,
+            "quality": {
+                "contrast": 169,
+                "edgeConsistency": 0.7907421053563697,
+                "meanLuminance": 126.37884773662552,
+                "pixels": 12192768,
+                "previousSuccessfulRoute": "",
+                "roiFraction": 0.057451105442176874,
+                "saturatedRatio": 0.0001234567901234568,
+                "sharpness": 29.47300593988133
+            },
+            "route": "",
+            "split": "regression",
+            "stageTimingsUs": {
+                "L0": 2827,
+                "L3": 47568,
+                "ROI": 3534,
+                "quality": 5335
+            },
+            "status": "timeout",
+            "tags": [
+                "blur",
+                "perspective",
+                "curved"
+            ],
+            "text": ""
+        }
+    ],
+    "roiAnnotatedAttempts": 0,
+    "roiBestIoUP50": 0,
+    "roiRecallAt50": 0,
+    "roiRecallAt70": 0,
+    "routes": {
+        "timeout": 50
+    },
+    "stageP95Ms": {
+        "L0": 3.269,
+        "L3": 52.521,
+        "ROI": 6.711,
+        "quality": 4.997
+    },
+    "wrong": 0
+}

@@ -1,0 +1,56 @@
+{
+  "pairedImages": 2,
+  "missingVendorImages": [],
+  "extraVendorImages": [],
+  "bothCorrect": 2,
+  "oursOnlyCorrect": 0,
+  "vendorOnlyCorrect": 0,
+  "neitherCorrect": 0,
+  "ours": {
+    "firstReadRate": 1.0,
+    "wrongOutputs": 0,
+    "p50Ms": 0.307,
+    "p95Ms": 0.575
+  },
+  "vendor": {
+    "firstReadRate": 1.0,
+    "wrongOutputs": 0,
+    "p50Ms": 1.0,
+    "p95Ms": 1.2
+  },
+  "mcnemarExactPValue": 1.0,
+  "pairedRecords": [
+    {
+      "image": "generated:datamatrix",
+      "expectedText": "PERFORMANCE-DM-2026",
+      "ours": {
+        "status": "success",
+        "text": "PERFORMANCE-DM-2026",
+        "correct": true,
+        "latencyMs": 0.307
+      },
+      "vendor": {
+        "status": "success",
+        "text": "PERFORMANCE-DM-2026",
+        "correct": true,
+        "latencyMs": 1.2
+      }
+    },
+    {
+      "image": "generated:qrcode",
+      "expectedText": "PERFORMANCE-QR-2026",
+      "ours": {
+        "status": "success",
+        "text": "PERFORMANCE-QR-2026",
+        "correct": true,
+        "latencyMs": 0.575
+      },
+      "vendor": {
+        "status": "success",
+        "text": "PERFORMANCE-QR-2026",
+        "correct": true,
+        "latencyMs": 1.0
+      }
+    }
+  ]
+}

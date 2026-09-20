@@ -1,0 +1,1 @@
+{"image":"../322631337-7566ac57-e5e6-49d0-bdd8-1ea7ffea9f59.jpg","expectedText":"","expectedOutcome":"detect_only","format":"Data Matrix","rows":48,"columns":48,"roi":[1020,1850,920,900],"corners":[[1062,1917],[1791,1845],[1890,2601],[1143,2691]],"split":"regression","batch":"field-sample-001","device":"phone","tags":["blur","perspective","curved"]}

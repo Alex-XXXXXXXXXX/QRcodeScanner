@@ -1,0 +1,2 @@
+{"image":"generated:qrcode","expectedText":"LEAK","split":"train","batch":"batch-a","device":"generator","tags":["test"]}
+{"image":"generated:qrcode","expectedText":"LEAK","split":"test","batch":"batch-b","device":"generator","tags":["test"]}
