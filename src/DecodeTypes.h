@@ -19,6 +19,8 @@ struct DecodeRecipe
     bool allowQrCode = true;
     bool allowDataMatrix = true;
     bool allowInverted = true;
+    bool allowMultipleSymbols = false;
+    int maximumSymbols = 16;
     int expectedDataMatrixRows = 0;
     int expectedDataMatrixColumns = 0;
     int maximumRoiCandidates = 3;
@@ -65,6 +67,13 @@ struct StageTiming
     qint64 elapsedMicroseconds = 0;
 };
 
+struct DecodedSymbol
+{
+    QString text;
+    QString format;
+    QVector<QPointF> corners;
+};
+
 struct DecodeReport
 {
     bool success = false;
@@ -78,6 +87,7 @@ struct DecodeReport
     ImageQuality quality;
     QVector<DecodeAttempt> attempts;
     QVector<StageTiming> stageTimings;
+    QVector<DecodedSymbol> symbols;
     QVector<QPointF> corners;
     QVector<QPolygonF> candidateCorners;
     double confidence = 0.0;

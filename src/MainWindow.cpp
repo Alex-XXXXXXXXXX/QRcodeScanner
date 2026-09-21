@@ -22,6 +22,7 @@
 #include <QResizeEvent>
 #include <QScrollArea>
 #include <QSplitter>
+#include <QSpinBox>
 #include <QStatusBar>
 #include <QStringList>
 #include <QVBoxLayout>
@@ -45,7 +46,10 @@ QPolygonF scaledPolygon(const QPolygonF& source, const QSize& sourceSize,
 QPolygonF reportPrimaryPolygon(const DecodeReport& report)
 {
     QPolygonF polygon;
-    if (report.corners.size() == 4) {
+    if (!report.symbols.isEmpty() && report.symbols.first().corners.size() == 4) {
+        for (const QPointF& point : report.symbols.first().corners)
+            polygon << point;
+    } else if (report.corners.size() == 4) {
         for (const QPointF& point : report.corners)
             polygon << point;
     } else if (!report.candidateCorners.isEmpty()
@@ -89,6 +93,8 @@ void drawReportBadge(QPainter& painter, const DecodeReport& report,
     QStringList lines;
     lines << (report.success ? QStringLiteral("解码成功")
                              : QStringLiteral("未解码（候选区域）"));
+    if (!report.symbols.isEmpty())
+        lines << QStringLiteral("码数：%1").arg(report.symbols.size());
     if (!report.format.isEmpty())
         lines << QStringLiteral("码制：%1").arg(report.format);
     else if (report.estimatedRows > 0)
@@ -102,7 +108,7 @@ void drawReportBadge(QPainter& painter, const DecodeReport& report,
                  .arg(report.totalMicroseconds / 1000.0, 0, 'f', 3);
     if (!hasPolygon)
         lines << QStringLiteral("未找到四角区域");
-    if (report.success && !report.text.isEmpty()) {
+    if (report.success && !report.text.isEmpty() && report.symbols.size() <= 1) {
         QString content = report.text;
         if (content.size() > 38)
             content = content.left(35) + QStringLiteral("...");
@@ -156,8 +162,17 @@ void MainWindow::buildUi()
     openButton_ = new QPushButton(QStringLiteral("打开本地图片"), central);
     decodeButton_ = new QPushButton(QStringLiteral("重新解码"), central);
     decodeButton_->setEnabled(false);
+    auto* maximumSymbolsLabel = new QLabel(QStringLiteral("最大识别码数："), central);
+    maximumSymbolsSpinBox_ = new QSpinBox(central);
+    maximumSymbolsSpinBox_->setRange(1, 64);
+    maximumSymbolsSpinBox_->setValue(4);
+    maximumSymbolsSpinBox_->setToolTip(
+        QStringLiteral("单张图片最多返回的校验有效二维码/Data Matrix 数量"));
     toolbarLayout->addWidget(openButton_);
     toolbarLayout->addWidget(decodeButton_);
+    toolbarLayout->addSpacing(16);
+    toolbarLayout->addWidget(maximumSymbolsLabel);
+    toolbarLayout->addWidget(maximumSymbolsSpinBox_);
     toolbarLayout->addStretch();
     rootLayout->addLayout(toolbarLayout);
 
@@ -203,6 +218,11 @@ void MainWindow::buildUi()
 
     connect(openButton_, &QPushButton::clicked, this, &MainWindow::openImage);
     connect(decodeButton_, &QPushButton::clicked, this, &MainWindow::decodeCurrentImage);
+    connect(maximumSymbolsSpinBox_, qOverload<int>(&QSpinBox::valueChanged),
+            this, [this](int) {
+                if (!currentImage_.isNull() && !decodeWatcher_.isRunning())
+                    decodeCurrentImage();
+            });
 }
 
 void MainWindow::openImage()
@@ -239,8 +259,13 @@ void MainWindow::decodeCurrentImage()
     setBusy(true);
     resultEdit_->clear();
     const QImage image = currentImage_;
-    decodeWatcher_.setFuture(QtConcurrent::run([image] {
-        return DecodeEngine().decode(image);
+    const int maximumSymbols = maximumSymbolsSpinBox_->value();
+    decodeWatcher_.setFuture(QtConcurrent::run([image, maximumSymbols] {
+        DecodeRequest request;
+        request.image = image;
+        request.recipe.allowMultipleSymbols = true;
+        request.recipe.maximumSymbols = maximumSymbols;
+        return DecodeEngine().decode(request);
     }));
 }
 
@@ -259,13 +284,36 @@ void MainWindow::showReport(const DecodeReport& report)
 
     QString details;
     if (report.success) {
-        statusLabel_->setText(QStringLiteral("解码成功"));
+        statusLabel_->setText(report.symbols.size() > 1
+            ? QStringLiteral("解码成功（%1 个码）").arg(report.symbols.size())
+            : QStringLiteral("解码成功"));
         statusLabel_->setStyleSheet(QStringLiteral("font-size: 18px; font-weight: 600; color: #18794e;"));
-        details += QStringLiteral("状态：%1\n码制：%2\n路径：%3\n置信度：%4\n总耗时：%5 ms\n\n内容：\n%6\n\n")
-            .arg(toString(report.status), report.format, report.route)
-            .arg(report.confidence, 0, 'f', 3)
-            .arg(report.totalMicroseconds / 1000.0, 0, 'f', 3)
-            .arg(report.text);
+        if (report.symbols.size() > 1) {
+            details += QStringLiteral("状态：%1\n码数：%2\n路径：%3\n总耗时：%4 ms\n")
+                .arg(toString(report.status))
+                .arg(report.symbols.size())
+                .arg(report.route)
+                .arg(report.totalMicroseconds / 1000.0, 0, 'f', 3);
+            for (int symbolIndex = 0; symbolIndex < report.symbols.size(); ++symbolIndex) {
+                const DecodedSymbol& symbol = report.symbols[symbolIndex];
+                details += QStringLiteral("\n码 %1\n码制：%2\n内容：%3\n四角坐标：\n")
+                    .arg(symbolIndex + 1)
+                    .arg(symbol.format, symbol.text);
+                for (int pointIndex = 0; pointIndex < symbol.corners.size(); ++pointIndex) {
+                    details += QStringLiteral("  P%1  (%2, %3)\n")
+                        .arg(pointIndex + 1)
+                        .arg(symbol.corners[pointIndex].x(), 0, 'f', 1)
+                        .arg(symbol.corners[pointIndex].y(), 0, 'f', 1);
+                }
+            }
+            details += QLatin1Char('\n');
+        } else {
+            details += QStringLiteral("状态：%1\n码制：%2\n路径：%3\n置信度：%4\n总耗时：%5 ms\n\n内容：\n%6\n\n")
+                .arg(toString(report.status), report.format, report.route)
+                .arg(report.confidence, 0, 'f', 3)
+                .arg(report.totalMicroseconds / 1000.0, 0, 'f', 3)
+                .arg(report.text);
+        }
     } else {
         statusLabel_->setText(QStringLiteral("未识别"));
         statusLabel_->setStyleSheet(QStringLiteral("font-size: 18px; font-weight: 600; color: #b42318;"));
@@ -281,7 +329,9 @@ void MainWindow::showReport(const DecodeReport& report)
     }
 
     const QPolygonF primaryPolygon = reportPrimaryPolygon(report);
-    if (primaryPolygon.size() == 4) {
+    if (report.symbols.size() > 1) {
+        // Every decoded symbol and its corners were listed above.
+    } else if (primaryPolygon.size() == 4) {
         details += report.corners.size() == 4
             ? QStringLiteral("区域：校验通过的码区\n四角坐标：\n")
             : QStringLiteral("区域：定位候选（尚未校验通过）\n四角坐标：\n");
@@ -317,6 +367,7 @@ void MainWindow::setBusy(bool busy)
 {
     openButton_->setEnabled(!busy);
     decodeButton_->setEnabled(!busy && !currentImage_.isNull());
+    maximumSymbolsSpinBox_->setEnabled(!busy);
     if (busy) {
         statusLabel_->setText(QStringLiteral("正在解码…"));
         statusLabel_->setStyleSheet(QStringLiteral("font-size: 18px; font-weight: 600;"));
@@ -356,10 +407,21 @@ void MainWindow::updatePreview()
             painter.drawPolygon(candidate);
         }
 
-        drawPolygonWithVertices(
-            painter, primary, primaryColor, 3,
-            lastReport_.success ? QStringLiteral("已验证码区")
-                                : QStringLiteral("候选码区"));
+        if (!lastReport_.symbols.isEmpty()) {
+            for (int index = 0; index < lastReport_.symbols.size(); ++index) {
+                const QPolygonF symbol = scaledPolygon(
+                    QPolygonF(lastReport_.symbols[index].corners),
+                    currentImage_.size(), preview.size());
+                drawPolygonWithVertices(
+                    painter, symbol, QColor(31, 191, 117), 3,
+                    QStringLiteral("码 %1").arg(index + 1));
+            }
+        } else {
+            drawPolygonWithVertices(
+                painter, primary, primaryColor, 3,
+                lastReport_.success ? QStringLiteral("已验证码区")
+                                    : QStringLiteral("候选码区"));
+        }
         drawReportBadge(painter, lastReport_, preview.size(), primary.size() == 4);
     }
     imageLabel_->setPixmap(preview);

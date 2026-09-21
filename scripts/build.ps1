@@ -1,13 +1,33 @@
 $ErrorActionPreference = 'Stop'
 
 $projectRoot = Split-Path -Parent $PSScriptRoot
-$cmake = 'C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe'
-$qtRoot = 'C:\Qt\QT5.14.2\5.14.2\msvc2017_64'
+$vswhere = 'C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe'
+if (-not (Test-Path -LiteralPath $vswhere)) {
+    throw "Visual Studio Installer was not found: $vswhere"
+}
+$visualStudioRoot = & $vswhere -latest -products * `
+    -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 `
+    -property installationPath
+if (-not $visualStudioRoot) {
+    throw 'Visual Studio 2022 with the C++ toolchain was not found.'
+}
+$cmake = Join-Path $visualStudioRoot `
+    'Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe'
+$qtRoot = @(
+    $env:QT_ROOT,
+    'D:\QT\msvc2019_64',
+    'C:\Qt\QT5.14.2\5.14.2\msvc2017_64'
+) | Where-Object {
+    $_ -and (Test-Path -LiteralPath (Join-Path $_ 'bin\qmake.exe'))
+} | Select-Object -First 1
 $buildDir = Join-Path $projectRoot 'build'
 $thirdParty = Join-Path $projectRoot 'third_party'
 
 if (-not (Test-Path -LiteralPath $cmake)) {
     throw "CMake not found: $cmake"
+}
+if (-not $qtRoot) {
+    throw 'Qt 5 MSVC was not found. Set QT_ROOT to the Qt kit directory.'
 }
 
 $configureArguments = @(
@@ -15,7 +35,8 @@ $configureArguments = @(
     '-B', $buildDir,
     '-G', 'Visual Studio 17 2022',
     '-A', 'x64',
-    "-DCMAKE_PREFIX_PATH=$qtRoot"
+    "-DCMAKE_PREFIX_PATH=$qtRoot",
+    '-DQRSCANNER_ENABLE_OPENCV=ON'
 )
 $opencvConfig = Get-ChildItem -LiteralPath $thirdParty -Recurse -Filter OpenCVConfig.cmake `
     -ErrorAction SilentlyContinue | Select-Object -First 1

@@ -18,6 +18,7 @@
 
 #include <algorithm>
 #include <atomic>
+#include <cmath>
 #include <functional>
 #include <memory>
 #include <vector>
@@ -100,6 +101,83 @@ bool payloadIsAllowed(const QString& text, const DecodeRecipe& recipe)
         return true;
     const QRegularExpression expression(recipe.payloadRegularExpression);
     return expression.isValid() && expression.match(text).hasMatch();
+}
+
+bool decodeMultipleSymbols(const QImage& input, const DecodeRecipe& recipe,
+                           QVector<DecodedSymbol>& decodedSymbols,
+                           QString& detectionDiagnostic)
+{
+    decodedSymbols.clear();
+    detectionDiagnostic.clear();
+    const QImage gray = input.format() == QImage::Format_Grayscale8
+        ? input : input.convertToFormat(QImage::Format_Grayscale8);
+    if (gray.isNull())
+        return false;
+
+    std::vector<ZXing::BarcodeFormat> enabledFormats;
+    if (recipe.allowQrCode)
+        enabledFormats.push_back(ZXing::BarcodeFormat::QRCode);
+    if (recipe.allowDataMatrix)
+        enabledFormats.push_back(ZXing::BarcodeFormat::DataMatrix);
+    if (enabledFormats.empty()) {
+        detectionDiagnostic = QStringLiteral("no barcode format enabled by recipe");
+        return false;
+    }
+
+    const ZXing::ImageView view(gray.constBits(), gray.width(), gray.height(),
+                                ZXing::ImageFormat::Lum, gray.bytesPerLine());
+    const int requestedMaximum = std::clamp(recipe.maximumSymbols, 1, 64);
+    const auto barcodes = ZXing::ReadBarcodes(
+        view,
+        ZXing::ReaderOptions()
+            .formats(ZXing::BarcodeFormats(std::move(enabledFormats)))
+            .tryHarder(true)
+            .tryRotate(true)
+            .tryInvert(recipe.allowInverted)
+            .tryDownscale(true)
+            // Invalid detector candidates must not consume the user-facing
+            // valid-symbol limit. Scan generously, then cap verified results.
+            .returnErrors(false)
+            .maxNumberOfSymbols(64));
+
+    for (const auto& barcode : barcodes) {
+        if (!barcode.isValid()) {
+            if (detectionDiagnostic.isEmpty()
+                && barcode.format() != ZXing::BarcodeFormat::None) {
+                detectionDiagnostic = QStringLiteral("%1: %2")
+                    .arg(QString::fromStdString(ZXing::ToString(barcode.format())),
+                         QString::fromStdString(ZXing::ToString(barcode.error())));
+            }
+            continue;
+        }
+
+        DecodedSymbol symbol;
+        symbol.text = QString::fromUtf8(barcode.text().c_str());
+        if (!payloadIsAllowed(symbol.text, recipe))
+            continue;
+        symbol.format = QString::fromStdString(ZXing::ToString(barcode.format()));
+        for (const auto& point : barcode.position())
+            symbol.corners.push_back(QPointF(point.x, point.y));
+        decodedSymbols.push_back(std::move(symbol));
+    }
+
+    std::sort(decodedSymbols.begin(), decodedSymbols.end(),
+        [](const DecodedSymbol& left, const DecodedSymbol& right) {
+            const QRectF leftBounds = QPolygonF(left.corners).boundingRect();
+            const QRectF rightBounds = QPolygonF(right.corners).boundingRect();
+            const double rowTolerance = std::max(leftBounds.height(), rightBounds.height()) * 0.5;
+            if (std::abs(leftBounds.center().y() - rightBounds.center().y()) > rowTolerance)
+                return leftBounds.center().y() < rightBounds.center().y();
+            return leftBounds.center().x() < rightBounds.center().x();
+        });
+
+    if (decodedSymbols.size() > requestedMaximum)
+        decodedSymbols.resize(requestedMaximum);
+
+    if (!decodedSymbols.isEmpty())
+        detectionDiagnostic = QStringLiteral("decoded %1 checksum-valid symbols")
+            .arg(decodedSymbols.size());
+    return !decodedSymbols.isEmpty();
 }
 
 qint64 remainingMicroseconds(const QElapsedTimer& timer, int budgetMs)
@@ -255,6 +333,38 @@ DecodeReport DecodeEngine::decode(const DecodeRequest& request) const
     report.quality.height = request.image.height();
     const RoutePlan routePlan = RoutePredictor().predict(report.quality, request.recipe);
     report.stageTimings.push_back({QStringLiteral("quality"), stageTimer.nsecsElapsed() / 1000});
+
+    if (request.recipe.allowMultipleSymbols) {
+        stageTimer.restart();
+        QString multiDiagnostic;
+        QVector<DecodedSymbol> symbols;
+        const bool multiSuccess = decodeMultipleSymbols(
+            request.image, request.recipe, symbols, multiDiagnostic);
+        const qint64 multiElapsed = stageTimer.nsecsElapsed() / 1000;
+        report.attempts.push_back({QStringLiteral("原图多码"), multiElapsed,
+                                   multiSuccess, multiDiagnostic});
+        report.stageTimings.push_back({QStringLiteral("multi"), multiElapsed});
+        if (multiSuccess) {
+            report.success = true;
+            report.status = DecodeStatus::Success;
+            report.symbols = std::move(symbols);
+            QStringList texts;
+            texts.reserve(report.symbols.size());
+            for (const DecodedSymbol& symbol : report.symbols)
+                texts.push_back(symbol.text);
+            report.text = texts.join(QLatin1Char('\n'));
+            report.format = report.symbols.size() == 1
+                ? report.symbols.first().format
+                : QStringLiteral("%1 × %2")
+                    .arg(report.symbols.first().format)
+                    .arg(report.symbols.size());
+            report.route = QStringLiteral("L0 多码 / 原始分辨率");
+            report.corners = report.symbols.first().corners;
+            report.confidence = 1.0;
+            report.totalMicroseconds = totalTimer.nsecsElapsed() / 1000;
+            return report;
+        }
+    }
 
     QString text, format, diagnostic;
     QVector<QPointF> points;

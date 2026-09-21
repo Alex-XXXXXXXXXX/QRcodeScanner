@@ -7,6 +7,7 @@
 
 #include <ZXingCpp.h>
 
+#include <algorithm>
 #include <array>
 #include <iostream>
 
@@ -25,7 +26,13 @@ int main(int argc, char** argv)
             return 5;
         }
 
-        const DecodeReport report = DecodeEngine().decode(localImage);
+        DecodeRequest request;
+        request.image = localImage;
+        request.recipe.allowMultipleSymbols = true;
+        request.recipe.maximumSymbols = arguments.size() > 2
+            ? std::clamp(arguments.at(2).toInt(), 1, 64)
+            : 16;
+        const DecodeReport report = DecodeEngine().decode(request);
         if (!report.success) {
             std::cerr << "File decode failed after "
                       << report.totalMicroseconds / 1000.0 << " ms\n";
@@ -65,10 +72,18 @@ int main(int argc, char** argv)
             return 6;
         }
 
-        std::cout << "Decoded " << report.format.toStdString()
+        std::cout << "Decoded " << report.symbols.size() << " symbol(s)"
                   << " via " << report.route.toStdString()
-                  << " in " << report.totalMicroseconds / 1000.0 << " ms\n"
-                  << report.text.toStdString() << "\n";
+                  << " in " << report.totalMicroseconds / 1000.0 << " ms\n";
+        if (!report.symbols.isEmpty()) {
+            for (int index = 0; index < report.symbols.size(); ++index) {
+                const DecodedSymbol& symbol = report.symbols[index];
+                std::cout << index + 1 << ": " << symbol.format.toStdString()
+                          << " | " << symbol.text.toStdString() << "\n";
+            }
+        } else {
+            std::cout << report.text.toStdString() << "\n";
+        }
         return 0;
     }
 

@@ -441,6 +441,20 @@ int main(int argc, char** argv)
                  "two checksum-valid conflicting payloads must return Conflict")) {
         return 11;
     }
+    conflictRequest.recipe.allowMultipleSymbols = true;
+    conflictRequest.recipe.maximumSymbols = 4;
+    const DecodeReport multiReport = DecodeEngine().decode(conflictRequest);
+    const bool foundConflictA = std::any_of(
+        multiReport.symbols.cbegin(), multiReport.symbols.cend(),
+        [](const DecodedSymbol& symbol) { return symbol.text == QStringLiteral("CONFLICT-A"); });
+    const bool foundConflictB = std::any_of(
+        multiReport.symbols.cbegin(), multiReport.symbols.cend(),
+        [](const DecodedSymbol& symbol) { return symbol.text == QStringLiteral("CONFLICT-B"); });
+    if (!require(multiReport.success && multiReport.symbols.size() == 2
+                 && foundConflictA && foundConflictB,
+                 "multi-symbol mode did not return both checksum-valid payloads")) {
+        return 11;
+    }
 
     QTemporaryDir temporaryDirectory;
     const QString filePath = temporaryDirectory.filePath(QStringLiteral("frame.png"));

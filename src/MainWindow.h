@@ -9,6 +9,7 @@
 class QLabel;
 class QPlainTextEdit;
 class QPushButton;
+class QSpinBox;
 
 class MainWindow final : public QMainWindow
 {
@@ -38,6 +39,7 @@ private:
     QPlainTextEdit* resultEdit_ = nullptr;
     QPushButton* openButton_ = nullptr;
     QPushButton* decodeButton_ = nullptr;
+    QSpinBox* maximumSymbolsSpinBox_ = nullptr;
     QImage currentImage_;
     QString currentPath_;
     DecodeReport lastReport_;

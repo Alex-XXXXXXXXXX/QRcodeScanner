@@ -9,7 +9,7 @@ find_package(Qt5 5.14 REQUIRED COMPONENTS Core Gui Widgets Concurrent)
 
 option(QRSCANNER_ENABLE_OPENCV "Enable OpenCV ROI and Data Matrix grid recovery" ON)
 if(QRSCANNER_ENABLE_OPENCV)
-    find_package(OpenCV 4.14.0 EXACT QUIET COMPONENTS core imgproc calib3d)
+    find_package(OpenCV 4.6.0 QUIET COMPONENTS core imgproc calib3d)
     if(OpenCV_FOUND)
         message(STATUS "OpenCV ${OpenCV_VERSION} enabled from ${OpenCV_DIR}")
     else()

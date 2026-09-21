@@ -21,7 +21,7 @@ Windows x64、CPU-only 的工业二维码解码原型。首要码制为 Data Mat
 - Visual Studio 2022
 - Qt 5.14.2 `msvc2017_64`
 - ZXing-C++ 3.0.2
-- OpenCV 4.14.0（当前项目已锁定用户提供的 Windows 包）
+- OpenCV 4.6.0 或更高版本（当前本机构建使用用户提供的 4.6.0 Windows 包）
 
 ```powershell
 .\scripts\fetch_dependencies.ps1
